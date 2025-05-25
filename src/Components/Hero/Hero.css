@@ -1,0 +1,131 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px; /* Enough padding to avoid overlap from navbar */
+    padding-bottom: 50px;
+    text-align: center;
+    min-height: 100vh; /* Ensures full screen view */
+    box-sizing: border-box;
+}
+
+.hero-img {
+  width: 200px;           /* Adjust as needed */
+  height: 200px;          /* Must be equal to width for a circle */
+  border-radius: 50%;     /* This creates the circular shape */
+  object-fit: cover;      /* Ensures the image fills the circle properly */
+  border: 3px solid white; /* Optional border for styling */
+}
+
+.hero h1 {
+    width: 90%;
+    max-width: 700px;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero h1 span {
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    width: 100%;
+    max-width: 700px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #ddd; /* Optional for contrast */
+}
+
+.hero-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.hero-connect,
+.hero-resume {
+    padding: 16px 32px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.hero-connect {
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    color: #fff;
+    border: none;
+}
+
+.hero-resume {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.hero-connect:hover {
+    transform: scale(1.05);
+    border: 2px solid #fff;
+}
+
+.hero-resume:hover {
+    border-color: #B415FF;
+    color: #B415FF;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .hero img {
+    margin-bottom: 10px;
+    width: 150px;
+    max-width: 60%;
+    margin-top: 5px;
+  }
+
+  .hero h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hero-action {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
